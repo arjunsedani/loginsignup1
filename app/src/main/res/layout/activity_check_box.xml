@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidtutorialshub.loginregister.activities.CheckBoxActivity">
+
+    <CheckBox
+        android:id="@+id/activity_check_box_1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:checked="true"
+        android:text="Formget."
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="70dp"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:id="@+id/activity_check_box_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Mailget."
+        tools:layout_editor_absoluteY="61dp"
+        tools:layout_editor_absoluteX="230dp"
+        android:onClick="onCheckboxClicked"/>
+
+</LinearLayout >

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidtutorialshub.loginregister.activities.RadioGroupActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="186dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="58dp"
+        android:weightSum="1">
+
+        <RadioButton
+            android:id="@+id/radiogrpButton1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="Formget"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="70dp" />
+
+        <RadioButton
+            android:id="@+id/radiogrpButton2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Mailget"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="170dp" />
+    </RadioGroup>
+</LinearLayout>

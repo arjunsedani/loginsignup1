@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidtutorialshub.loginregister">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver android:name=".activities.BroadcastRxActivity" />
+        <receiver android:name=".activities.BroadcastActivity$MyThirdReceiverInner" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.UsersListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ListActivity" />
+        <activity android:name=".activities.TxtActivity" />
+        <activity android:name=".activities.EditTextActivity" />
+        <activity android:name=".activities.ButtonActivity" />
+        <activity android:name=".activities.ImageActivity" />
+        <activity android:name=".activities.ImageButtonActivity" />
+        <activity android:name=".activities.CheckBoxActivity" />
+        <activity android:name=".activities.RadioButtonActivity" />
+        <activity android:name=".activities.RadioGroupActivity" />
+        <activity android:name=".activities.ListViewActivity" />
+        <activity android:name=".activities.SpinnerActivity" />
+        <activity android:name=".activities.AutoCompleteTextActivity" />
+        <activity android:name=".activities.GridActivity" />
+        <activity android:name=".activities.ImageAdaptor" />
+        <activity android:name=".activities.SingleViewActivity" />
+        <activity android:name=".activities.MapsActivity" />
+        <activity
+            android:name=".activities.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.SharedPreference" />
+        <activity android:name=".activities.ScreenSlide" />
+        <activity android:name=".activities.DownloadImgActivity" />
+        <activity android:name=".activities.BroadcastActivity" />
+        <activity android:name=".activities.DynamicBroadcastActivity" />
+        <activity android:name=".activities.DynamicBroadcastRxActivity" />
+        .
+        <activity android:name=".activities.FrescoAppGIFActivity" />
+        <activity android:name=".activities.OnLongPress" />
+        <activity android:name=".activities.FlexibleActivity" />
+        <activity android:name=".activities.ExpandableList" />
+        <activity
+            android:name=".activities.NetworkConnectivityActivity"
+            android:label="@string/title_activity_network_connectivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+
+    </application>
+
+</manifest>
