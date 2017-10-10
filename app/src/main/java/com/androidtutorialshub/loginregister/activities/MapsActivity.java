@@ -1,5 +1,8 @@
 package com.androidtutorialshub.loginregister.activities;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -10,8 +13,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.content.ContextCompat;
+import android.widget.Toast;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
     private GoogleMap mMap;
 
@@ -38,10 +46,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+       // Location location = locationManager.getLastKnownLocation(provider);
 
+        //locationManager.requestLocationUpdates(provider, 20000, 1, this);
+
+       // if(location!=null)
         // Add a marker in Sydney and move the camera
         LatLng rajkot = new LatLng(22.3039, 70.8022);
+        //LatLng rajkot = new LatLng(22.3039, 70.8022);
         mMap.addMarker(new MarkerOptions().position(rajkot).title("Arjun in Rajkot"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(rajkot));
     }
+
+
 }

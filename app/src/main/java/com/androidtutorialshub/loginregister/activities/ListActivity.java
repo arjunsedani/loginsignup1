@@ -3,14 +3,12 @@ package com.androidtutorialshub.loginregister.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -33,7 +31,7 @@ public class ListActivity extends AppCompatActivity {
                 "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                 "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
                 "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                "long press", "network", "flexible space","Expandable List" };
+                "long press", "network", "flexible space","Expandable List","MY LOCATION" };
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -127,7 +125,7 @@ public class ListActivity extends AppCompatActivity {
                     launchexpandableList();
                 }
                 if(position == 24){
-                    Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
+                    launchmylocation();
                 }
                 if(position == 25){
                     Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
@@ -314,6 +312,11 @@ public class ListActivity extends AppCompatActivity {
     private void launchexpandableList() {
 
         Intent intent = new Intent(this, ExpandableList.class);
+        startActivity(intent);
+    }
+    private void launchmylocation() {
+
+        Intent intent = new Intent(this, MyLocation.class);
         startActivity(intent);
     }
 

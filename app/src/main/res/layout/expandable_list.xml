@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/swipe_to_refresh_layout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    context="com.androidtutorialshub.loginregister.activities.ExpandableList">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,3 +24,4 @@
         android:dividerHeight="0.5dp" />
 
 </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

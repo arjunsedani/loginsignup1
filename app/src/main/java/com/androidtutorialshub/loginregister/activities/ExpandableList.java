@@ -1,4 +1,5 @@
 package com.androidtutorialshub.loginregister.activities;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ExpandableList extends AppCompatActivity {
-
+    private SwipeRefreshLayout swipeRefreshLayout;
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
     List<String> expandableListTitle;
@@ -64,6 +65,17 @@ public class ExpandableList extends AppCompatActivity {
                 return false;
             }
         });
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_to_refresh_layout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                fetchTimelineAsync(0);
+            }
+        });
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light, R.color.colorAccent, R.color.colorPrimaryDark);
+    }
+    public void fetchTimelineAsync(int page) {
+        //
     }
 
 }
