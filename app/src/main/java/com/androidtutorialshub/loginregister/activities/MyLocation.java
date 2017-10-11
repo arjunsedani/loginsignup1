@@ -1,20 +1,33 @@
 package com.androidtutorialshub.loginregister.activities;
 
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
+import android.support.annotation.DrawableRes;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.androidtutorialshub.loginregister.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MyLocation extends FragmentActivity implements LocationProvider.LocationCallback {
+public class MyLocation extends FragmentActivity implements LocationProvider.LocationCallback, GoogleMap.OnInfoWindowClickListener {
 
     public static final String TAG = MapsActivity.class.getSimpleName();
 
@@ -26,6 +39,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_location_demo);
+
         setUpMapIfNeeded();
 
         mLocationProvider = new LocationProvider(this, this);
@@ -83,17 +97,34 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
     }
 
     public void handleNewLocation(Location location) {
+        //BitmapDescriptor icon1 = BitmapDescriptorFactory.fromResource(R.drawable.arjun);
+        UiSettings settings = mMap.getUiSettings();
         Log.d(TAG, location.toString());
 
         double currentLatitude = location.getLatitude();
         double currentLongitude = location.getLongitude();
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
-
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(currentLatitude, currentLongitude)).title("Current Location"));
+      //.icon(BitmapDescriptorFactory.fromResource(R.drawable.arjun))
         MarkerOptions options = new MarkerOptions()
                 .position(latLng)
-                .title("I am here!");
+                .title("I am here!")
+                .snippet(String.valueOf(latLng))
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+
+                //.icon(vectorToBitmap(R.drawable.arjun, Color.parseColor("#A4C639")));
+
         mMap.addMarker(options);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+       // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,5));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+        mMap.setTrafficEnabled(true);
+        settings.setZoomControlsEnabled(true);
+        settings.setCompassEnabled(true);
+        mMap.setOnInfoWindowClickListener(this);
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Toast.makeText(this, "Info window clicked",
+                Toast.LENGTH_SHORT).show();
     }
 }
