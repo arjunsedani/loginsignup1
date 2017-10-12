@@ -73,7 +73,12 @@
             android:name=".activities.NetworkConnectivityActivity"
             android:label="@string/title_activity_network_connectivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
+        <activity android:name=".activities.SplashActivity"/>
+        <activity android:name=".activities.ShoppingActivity" />
+        <activity android:name=".activities.ProductActivity" />
+        <activity android:name=".activities.CheckoutActivity" />
+        <activity android:name=".activities.PaymentsActivity" />
+        <activity android:name=".activities.PayPalCheckoutActivity"></activity>
 
 
     </application>

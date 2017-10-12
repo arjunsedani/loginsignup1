@@ -31,7 +31,7 @@ public class ListActivity extends AppCompatActivity {
                 "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                 "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
                 "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                "long press", "network", "flexible space","Expandable List","MY LOCATION" };
+                "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart" };
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -128,6 +128,9 @@ public class ListActivity extends AppCompatActivity {
                     launchmylocation();
                 }
                 if(position == 25){
+                    launchcart();
+                }
+                if(position == 26){
                     Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
                 }
 
@@ -317,6 +320,11 @@ public class ListActivity extends AppCompatActivity {
     private void launchmylocation() {
 
         Intent intent = new Intent(this, MyLocation.class);
+        startActivity(intent);
+    }
+    private void launchcart() {
+
+        Intent intent = new Intent(this, SplashActivity.class);
         startActivity(intent);
     }
 

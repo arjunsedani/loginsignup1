@@ -1,33 +1,25 @@
 package com.androidtutorialshub.loginregister.activities;
 
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.androidtutorialshub.loginregister.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MyLocation extends FragmentActivity implements LocationProvider.LocationCallback, GoogleMap.OnInfoWindowClickListener {
+public class MyLocation extends FragmentActivity implements LocationProvider.LocationCallback, GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
     public static final String TAG = MapsActivity.class.getSimpleName();
 
@@ -40,7 +32,10 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_location_demo);
 
-        setUpMapIfNeeded();
+        //setUpMapIfNeeded();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map1);
+        mapFragment.getMapAsync(this);
 
         mLocationProvider = new LocationProvider(this, this);
     }
@@ -77,8 +72,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                    .getMap();
+           // mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap;
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
@@ -93,7 +87,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 
     public void handleNewLocation(Location location) {
@@ -126,5 +120,20 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
     public void onInfoWindowClick(Marker marker) {
         Toast.makeText(this, "Info window clicked",
                 Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        // Location location = locationManager.getLastKnownLocation(provider);
+
+        //locationManager.requestLocationUpdates(provider, 20000, 1, this);
+
+        // if(location!=null)
+        // Add a marker in Sydney and move the camera
+        LatLng rajkot = new LatLng(22.3039, 70.8022);
+        //LatLng rajkot = new LatLng(22.3039, 70.8022);
+        mMap.addMarker(new MarkerOptions().position(rajkot).title("Arjun in Rajkot"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(rajkot));
     }
 }
