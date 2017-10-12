@@ -125,12 +125,6 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        // Location location = locationManager.getLastKnownLocation(provider);
-
-        //locationManager.requestLocationUpdates(provider, 20000, 1, this);
-
-        // if(location!=null)
-        // Add a marker in Sydney and move the camera
         LatLng rajkot = new LatLng(22.3039, 70.8022);
         //LatLng rajkot = new LatLng(22.3039, 70.8022);
         mMap.addMarker(new MarkerOptions().position(rajkot).title("Arjun in Rajkot"));
