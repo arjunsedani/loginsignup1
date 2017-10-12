@@ -32,6 +32,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_location_demo);
 
+
         //setUpMapIfNeeded();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map1);
