@@ -41,7 +41,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
     private List<ProductObject> getAllProductsOnSale(){
         List<ProductObject> products = new ArrayList<ProductObject>();
-        products.add(new ProductObject(1, "Sleek Black Top", R.drawable.productonesmall, "Beautiful sleek black top for casual outfit and evening walk", 20, 38, "Black"));
+        products.add(new ProductObject(1, "Sleek Black Top", R.drawable.product7, "Beautiful sleek black top for casual outfit and evening walk", 20, 38, "Black"));
         products.add(new ProductObject(1, "Flare Black Gown", R.drawable.producttwo, "Beautiful sleek black top for casual outfit and evening walk", 20, 38, "Black"));
         products.add(new ProductObject(1, "Flare White Blouse", R.drawable.productthree, "Beautiful sleek black top for casual outfit and evening walk", 20, 38, "White"));
         products.add(new ProductObject(1, "Blue Swed Gown", R.drawable.productfour, "Beautiful sleek black top for casual outfit and evening walk", 20, 38, "Dark Blue"));

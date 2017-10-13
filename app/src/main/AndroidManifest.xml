@@ -79,6 +79,7 @@
         <activity android:name=".activities.CheckoutActivity" />
         <activity android:name=".activities.PaymentsActivity" />
         <activity android:name=".activities.PayPalCheckoutActivity"></activity>
+        <activity android:name=".activities.CreateNotification" />
 
 
     </application>
