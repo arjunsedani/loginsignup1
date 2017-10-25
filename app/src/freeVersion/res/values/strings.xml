@@ -1,0 +1,100 @@
+<resources>
+   <!--<string name="app_name">facebook</string>-->
+    <string name="text_accounts">All Accounts</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_register">Register</string>
+    <string name="error_message_name">Enter Full Name</string>
+    <string name="error_message_email">Enter Valid Email</string>
+    <string name="error_message_age">Enter Age</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="success_message">Registration Successful</string>
+    <string name="text_not_member">No account yet? Create one</string>
+    <string name="text_already_member">Already a member? Login</string>
+    <string name="error_email_exists">Email Already Exists</string>
+    <string name="error_password_match">Password Does Not Matches</string>
+    <string name="error_valid_email_password">Wrong Email or Password</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_hello">Hello,</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_shared_preference">SharedPreference</string>
+    <string name="title_activity_screen_slide">ScreenSlide</string>
+    <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
+    <string name="title_activity_download_img">DownloadImgActivity</string>
+    <string name="title_activity_broadcast">BroadcastActivity</string>
+    <string name="title_activity_broadcast_rx">BroadcastRxActivity</string>
+    <string name="title_activity_dynamic_broadcast">DynamicBroadcastActivity</string>
+    <string name="title_activity_fresco_app_gif">FrescoAppGIFActivity</string>
+    <string name="title_activity_network_connectivity">NetworkConnectivityActivity</string>
+    <string name="strange">Doctor Strange was an egotistical but very brilliant surgeon.
+        After a car accident destroys his hands and hinders his ability to perform surgery,
+        he searches the globe for a way to repair them and encounters the Ancient One. After
+        becoming one of the old Sorcerer Supreme\'s students, he becomes a practitioner of both
+        the mystical arts as well as martial arts. Along with knowing many powerful spells, he
+        has a costume with two mystical objects - the Cloak of Levitation and Eye of Agamotto
+        that gives him added powers. Strange is aided along the way by
+        his friend and servant to the Sorcerer Supreme, Wong, and a large assortment of mystical o
+        bjects. He takes up residence in a mansion called the Sanctum Sanctorum, located in
+        New York City. Later, Strange takes the title of Sorcerer Supreme.
+    Doctor Strange was an egotistical but very brilliant surgeon.
+        After a car accident destroys his hands and hinders his ability to perform surgery,
+        he searches the globe for a way to repair them and encounters the Ancient One. After
+        becoming one of the old Sorcerer Supreme\'s students, he becomes a practitioner of both
+        the mystical arts as well as martial arts. Along with knowing many powerful spells, he
+        has a costume with two mystical objects - the Cloak of Levitation and Eye of Agamotto
+        that gives him added powers. Strange is aided along the way by
+        his friend and servant to the Sorcerer Supreme, Wong, and a large assortment of mystical o
+        bjects. He takes up residence in a mansion called the Sanctum Sanctorum, located in
+        New York City. Later, Strange takes the title of Sorcerer Supreme.
+    Doctor Strange was an egotistical but very brilliant surgeon.
+        After a car accident destroys his hands and hinders his ability to perform surgery,
+        he searches the globe for a way to repair them and encounters the Ancient One. After
+        becoming one of the old Sorcerer Supreme\'s students, he becomes a practitioner of both
+        the mystical arts as well as martial arts. Along with knowing many powerful spells, he
+        has a costume with two mystical objects - the Cloak of Levitation and Eye of Agamotto
+        that gives him added powers. Strange is aided along the way by
+        his friend and servant to the Sorcerer Supreme, Wong, and a large assortment of mystical o
+        bjects. He takes up residence in a mansion called the Sanctum Sanctorum, located in
+        New York City. Later, Strange takes the title of Sorcerer Supreme.
+    Doctor Strange was an egotistical but very brilliant surgeon.
+        After a car accident destroys his hands and hinders his ability to perform surgery,
+        he searches the globe for a way to repair them and encounters the Ancient One. After
+        becoming one of the old Sorcerer Supreme\'s students, he becomes a practitioner of both
+        the mystical arts as well as martial arts. Along with knowing many powerful spells, he
+        has a costume with two mystical objects - the Cloak of Levitation and Eye of Agamotto
+        that gives him added powers. Strange is aided along the way by
+        his friend and servant to the Sorcerer Supreme, Wong, and a large assortment of mystical o
+        bjects. He takes up residence in a mansion called the Sanctum Sanctorum, located in
+        New York City. Later, Strange takes the title of Sorcerer Supreme.</string>
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+
+    <string name="android_pay">Android Pay. Simple way to pay</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="description_example">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</string>
+    <string name="product_size">Size: 40</string>
+    <string name="product_color">Color: Black</string>
+    <string name="product_price">Price: 80$</string>
+    <string name="action_cart">Shopping cart</string>
+    <string name="quantity">1</string>
+    <string name="product_name">Sleek black top</string>
+    <string name="price">100 $</string>
+    <string name="remove_from_cart">Remove</string>
+    <string name="continue_shopping">Continue shopping</string>
+    <string name="checkout">Checkout</string>
+    <string name="sub_total">Sub total:</string>
+    <string name="server_error">Failed to payment information to server</string>
+    <string name="successful_payment">Payment successfully uploaded</string>
+    <string name="pay_with_paypal">Pay with PayPal</string>
+</resources>

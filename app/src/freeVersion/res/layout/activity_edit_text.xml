@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidtutorialshub.loginregister.activities.EditTextActivity">
+    <EditText
+        android:id="@+id/activity_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:hint="Enter a Number"
+        android:singleLine="true"
+        android:inputType="textPassword" />
+</android.support.constraint.ConstraintLayout>

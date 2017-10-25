@@ -14,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.androidtutorialshub.loginregister.BuildConfig;
 import com.androidtutorialshub.loginregister.R;
 
 import java.util.ArrayList;
@@ -27,25 +28,48 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         final ListView listview = (ListView) findViewById(R.id.listview);
-        String[] values = new String[] { "Text View", "EditText", "Button",
-                "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
-                "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
-                "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification" };
+        if (BuildConfig.IS_PRO) {
+            String[] values = new String[] { "Text View", "EditText", "Button",
+                    "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
+                    "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
+                    "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
+                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification" };
+            final ArrayList<String> list = new ArrayList<String>();
+            for (int i = 0; i < values.length; ++i) {
+                list.add(values[i]);
+            }
 
-        final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-            list.add(values[i]);
+            listview.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    TextView textView = (TextView) super.getView(position, convertView, parent);
+                    textView.setTextColor(getResources().getColor(android.R.color.black));
+                    return textView;
+                }
+            });
+        }
+        else {
+            String[] values = new String[]{"Text View", "EditText", "Button",
+                    "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
+                    "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
+                    "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
+                    };
+            final ArrayList<String> list = new ArrayList<String>();
+            for (int i = 0; i < values.length; ++i) {
+                list.add(values[i]);
+            }
+
+            listview.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    TextView textView = (TextView) super.getView(position, convertView, parent);
+                    textView.setTextColor(getResources().getColor(android.R.color.black));
+                    return textView;
+                }
+            });
         }
 
-        listview.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                TextView textView = (TextView) super.getView(position, convertView, parent);
-                textView.setTextColor(getResources().getColor(android.R.color.black));
-                return textView;
-            }
-        });
+
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

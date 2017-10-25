@@ -21,11 +21,14 @@ android {
         freeVersion {
             applicationId "com.androidtutorialshub.loginregisterfree"
             resValue "string", "app_name", "Flipkart Free Version"
+            buildConfigField 'boolean', 'IS_PRO', 'false'
         }
 
         proVersion {
             applicationId "com.androidtutorialshub.loginregister"
             resValue "string", "app_name", "Flipkart Pro Version"
+            buildConfigField 'boolean', 'IS_PRO', 'true'
+            //resValue "colors","colorText","#ff"
         }
     }
 }
