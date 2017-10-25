@@ -335,8 +335,4 @@ public class ListActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreateNotification.class);
         startActivity(intent);
     }
-
-
-
-
 }
