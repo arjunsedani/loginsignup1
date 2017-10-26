@@ -2,6 +2,7 @@ package com.androidtutorialshub.loginregister.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -33,7 +34,7 @@ public class ListActivity extends AppCompatActivity {
                     "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                     "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
                     "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification" };
+                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification","tel:741931500" };
             final ArrayList<String> list = new ArrayList<String>();
             for (int i = 0; i < values.length; ++i) {
                 list.add(values[i]);
@@ -158,6 +159,9 @@ public class ListActivity extends AppCompatActivity {
                     launchnotification();
                 }
                 if(position == 27){
+                    dialPhoneNumber();
+                }
+                if(position == 28){
                     Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
                 }
 
@@ -358,5 +362,12 @@ public class ListActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, CreateNotification.class);
         startActivity(intent);
+    }
+    public void dialPhoneNumber() {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" ));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
