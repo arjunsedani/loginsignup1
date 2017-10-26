@@ -2,21 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/spirationdark">
 
     <Button
         android:id="@+id/bt_go_forward"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Features"
+        android:layout_marginLeft="130dp"
         android:elevation="2dp"
+        android:text="Features"
         android:theme="@style/PrimaryButton" />
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/userColor"
-        android:textColor="@android:color/black"
+        android:layout_height="50dp"
+        android:background="@drawable/spirationdark"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -24,11 +25,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/holo_green_light"
             android:text="@string/text_hello" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewName"
+            android:textColor="@android:color/holo_green_light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -48,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@android:color/black"
-        android:background="@color/userColor"/>
+        android:background="@drawable/spirationdark"/>
 
 </LinearLayout>
 

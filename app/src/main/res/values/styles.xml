@@ -10,7 +10,7 @@
         <item name="colorControlActivated">@color/colorText</item>
     </style>
     <style name="PrimaryButton" parent="Theme.AppCompat">
-        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@color/colorPrimary2</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

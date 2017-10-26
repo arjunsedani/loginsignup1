@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/doodles"
     tools:context=".activities.ListActivity">
     <FrameLayout
         android:id="@+id/frame"
@@ -15,8 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="50dp"
-        android:background="@color/promocolor"
         android:theme="@style/PrimaryButton"
+        android:divider="#757575"
+        android:dividerHeight="1dp"
         tools:context=".activities.ListActivity" />
 
 </LinearLayout>
