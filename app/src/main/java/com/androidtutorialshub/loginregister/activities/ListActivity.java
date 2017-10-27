@@ -34,7 +34,7 @@ public class ListActivity extends AppCompatActivity {
                     "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                     "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
                     "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification","tel:741931500","browser" };
+                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification","tel:741931500","browser","map search" };
             final ArrayList<String> list = new ArrayList<String>();
             for (int i = 0; i < values.length; ++i) {
                 list.add(values[i]);
@@ -53,7 +53,7 @@ public class ListActivity extends AppCompatActivity {
             String[] values = new String[]{"Text View", "EditText", "Button",
                     "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                     "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
-                    "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
+                    "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF"
                     };
             final ArrayList<String> list = new ArrayList<String>();
             for (int i = 0; i < values.length; ++i) {
@@ -163,6 +163,9 @@ public class ListActivity extends AppCompatActivity {
                 }
                 if(position == 28){
                     launchbrowser();
+                }
+                if(position == 29){
+                    launchmapsearch();
                 }
                 if(position == 29){
                     Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
@@ -376,6 +379,11 @@ public class ListActivity extends AppCompatActivity {
     private void launchbrowser() {
 
         Intent intent = new Intent(this, BrowserActivity.class);
+        startActivity(intent);
+    }
+    private void launchmapsearch() {
+
+        Intent intent = new Intent(this, SearchLocation.class);
         startActivity(intent);
     }
 }
