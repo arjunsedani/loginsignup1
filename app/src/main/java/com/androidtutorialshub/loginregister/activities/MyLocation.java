@@ -38,9 +38,10 @@ import java.util.List;
 
 public class MyLocation extends FragmentActivity implements LocationProvider.LocationCallback, GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
-    private static final LatLng LOWER_MANHATTAN = new LatLng(22.3039, 70.8022);
-    private static final LatLng BROOKLYN_BRIDGE = new LatLng(12.9716, 77.5946);
-    private static final LatLng WALL_STREET = new LatLng(40.7064, -74.0094);
+    private static final LatLng RAJKOT = new LatLng(22.3039, 70.8022);
+    private static final LatLng BANGALORE = new LatLng(12.9716, 77.5946);
+    private static LatLng srcltglng;
+    private static LatLng destltglng;
 
     public static final String TAG = MapsActivity.class.getSimpleName();
 
@@ -52,7 +53,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_location_demo);
-        String url = getDirectionsUrl(LOWER_MANHATTAN,BROOKLYN_BRIDGE);
+        String url = getDirectionsUrl(RAJKOT,BANGALORE);
         ReadTask downloadTask = new ReadTask();
         downloadTask.execute(url);
 
@@ -122,6 +123,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
         double currentLatitude = location.getLatitude();
         double currentLongitude = location.getLongitude();
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
+        srcltglng=latLng;
       //.icon(BitmapDescriptorFactory.fromResource(R.drawable.arjun))
         MarkerOptions options = new MarkerOptions()
                 .position(latLng)
@@ -174,6 +176,10 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
             }
             Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            destltglng=latLng;
+            String url = getDirectionsUrl(srcltglng,destltglng);
+            ReadTask downloadTask = new ReadTask();
+            downloadTask.execute(url);
             MarkerOptions options = new MarkerOptions()
                     .position(latLng)
                     .title("I am here!")
@@ -268,7 +274,7 @@ public class MyLocation extends FragmentActivity implements LocationProvider.Loc
                 }
 
                 polyLineOptions.addAll(points);
-                polyLineOptions.width(2);
+                polyLineOptions.width(5);
                 polyLineOptions.color(Color.BLUE);
             }
 
