@@ -34,7 +34,7 @@ public class ListActivity extends AppCompatActivity {
                     "ImageView", "ImageButton", "CheckBox", "Radio button", "RadioGroup",
                     "ListView", "Spinner", "AutoCompleteTextView", "gridview", "Maps", "navigation",
                     "sharedpreference", "SLIDEVIEW", "DOWNLOAD IMAGE", "BROADCAST RX", "DYNAMIC BROADCAST RX", "GIF",
-                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification","tel:741931500" };
+                    "long press", "network", "flexible space","Expandable List","MY LOCATION","arjun cart","Notification","tel:741931500","browser" };
             final ArrayList<String> list = new ArrayList<String>();
             for (int i = 0; i < values.length; ++i) {
                 list.add(values[i]);
@@ -162,6 +162,9 @@ public class ListActivity extends AppCompatActivity {
                     dialPhoneNumber();
                 }
                 if(position == 28){
+                    launchbrowser();
+                }
+                if(position == 29){
                     Toast.makeText(ListActivity.this, "Clicked on position 2", Toast.LENGTH_LONG).show();
                 }
 
@@ -369,5 +372,10 @@ public class ListActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
+    }
+    private void launchbrowser() {
+
+        Intent intent = new Intent(this, BrowserActivity.class);
+        startActivity(intent);
     }
 }
