@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_email"
                 android:inputType="text"
-                android:text="sedaniarjun@gmail.com"
+                android:text="sedaniarjun2@gmail.com"
                 android:maxLines="1"
                 android:textColor="@android:color/white" />
         </android.support.design.widget.TextInputLayout>

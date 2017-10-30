@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -22,7 +25,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class ListActivity extends AppCompatActivity {
+    private TextView textGallery;
+    private TextView textSettings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,6 +182,35 @@ public class ListActivity extends AppCompatActivity {
             }
 
         });
+        textGallery = (TextView) findViewById(R.id.text_gallery);
+        textSettings = (TextView) findViewById(R.id.text_setting);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_favorites:
+                                listview.setVisibility(View.VISIBLE);
+                                textGallery.setVisibility(View.GONE);
+                                textSettings.setVisibility(View.GONE);
+                                break;
+                            case R.id.action_schedules:
+                                listview.setVisibility(View.GONE);
+                                textGallery.setVisibility(View.VISIBLE);
+                                textSettings.setVisibility(View.GONE);
+                                break;
+                            case R.id.action_music:
+                                listview.setVisibility(View.GONE);
+                                textGallery.setVisibility(View.GONE);
+                                textSettings.setVisibility(View.VISIBLE);
+                                break;
+                        }
+                        return false;
+                    }
+                });
     }
 
     private class StableArrayAdapter extends ArrayAdapter<String> {
