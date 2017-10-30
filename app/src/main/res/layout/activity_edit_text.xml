@@ -15,7 +15,7 @@
         android:gravity="center"
         android:padding="10dp"
         android:layout_margin="20dp"
-        android:hint="Enter a Number"
+        android:hint="Enter text"
         android:singleLine="true"
         android:inputType="textPassword" />
 </android.support.constraint.ConstraintLayout>

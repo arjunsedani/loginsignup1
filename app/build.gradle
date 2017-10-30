@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    flavorDimensions "default"
     compileSdkVersion 25
-    buildToolsVersion '26.0.1'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.androidtutorialshub.loginregister"

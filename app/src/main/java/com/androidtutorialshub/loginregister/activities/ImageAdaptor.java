@@ -51,15 +51,15 @@ public class ImageAdaptor extends BaseAdapter {
 
     // Keep all Images in array
     public Integer[] mThumbIds = {
-            R.drawable.facebook, R.drawable.facebook,
-            R.drawable.facebook, R.drawable.facebook,
-            R.drawable.facebook, R.drawable.facebook,
+            R.drawable.arjun, R.drawable.arjun,
+            R.drawable.arjun, R.drawable.arjun,
+            R.drawable.arjun, R.drawable.arjun,
             R.drawable.arjun, R.drawable.arjun2,
             R.drawable.instagram, R.drawable.instagram,
             R.drawable.instagram, R.drawable.instagram,
-            R.drawable.facebook, R.drawable.facebook,
-            R.drawable.facebook, R.drawable.facebook,
-            R.drawable.facebook, R.drawable.facebook,
+            R.drawable.arjun, R.drawable.arjun,
+            R.drawable.arjun, R.drawable.arjun,
+            R.drawable.arjun, R.drawable.arjun,
             R.drawable.instagram, R.drawable.instagram,
             R.drawable.instagram, R.drawable.instagram
     };
