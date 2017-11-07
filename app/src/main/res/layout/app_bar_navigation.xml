@@ -28,9 +28,6 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_navigation" />
 
 
     <include layout="@layout/content_main" />
