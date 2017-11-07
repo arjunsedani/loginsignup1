@@ -33,13 +33,6 @@
         layout="@layout/content_navigation" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:text="welcome to navigation"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/_20sdp" />
-
+    <include layout="@layout/content_main" />
 
 </android.support.design.widget.CoordinatorLayout>
