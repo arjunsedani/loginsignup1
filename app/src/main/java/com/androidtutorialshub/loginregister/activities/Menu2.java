@@ -10,17 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.androidtutorialshub.loginregister.R;
-/**
- * Created by sedani.ab on 11/7/2017.
- */
+
 
 public class Menu2 extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //returning our layout file
-        //change R.layout.yourlayoutfilename for each of your fragments
         return inflater.inflate(R.layout.fragment_menu_2, container, false);
     }
 
